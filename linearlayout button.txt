@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+ 
+    <Button                                                       //создание кнопки
+        android:id="@+id/topButton"
+        android:layout_width="match_parent"                      //раст€гивание на всю ширину экрана
+        android:layout_height="match_parent"
+        android:text="blblblblblbl" />
+ 
+</LinearLayout>
+
+
+
+
+
+//инициализаци€ кнопки
+protected void onCreate(Bundle savedInstanceState) {              //инициальзаци€ кнопки
+	super.onCreate(savedInstanceState);
+	setContentView(R.layout.layout_main);
+ 
+	Button topButton = (Button) findViewById(R.id.topButton);	
+}
+
+
+
+
+//нажатие на кнопку
+
+1.
+android:onClick="onMyButtonClick";
+
+
+public void onMyButtonClick(View view)       //метод, обрабатывающий нажатие
+{  
+    //действи€ при нажатии
+}  
+
+
+
+2.
+Button button = (Button) findViewById(R.id.button);    //предварительное объ€вление кнопки
+
+
+button.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View v) {
+        
+    }
+});
+
+
+
+
+
+//обработка нажати€ на несколько кнопок
+
+
+import android.view.View.OnClickListener;
+
+public class ButtonDemoActivity extends Activity implements OnClickListener...
+
+final Button button1 = (Button)findViewById(R.id.button1);
+final Button button2 = (Button)findViewById(R.id.button2);
+final Button button3 = (Button)findViewById(R.id.button3);
+
+
+button1.setOnClickListener(this);  //задаем обработчика нажати€
+button2.setOnClickListener(this);
+button3.setOnClickListener(this);
+
+
+public void onClick(View v){             //метод, определ€ющий кака€ кнопка была нажата, в каждом case действи€ при нажатии конкретной кнопки
+    switch (v.getId()) {
+	    case R.id.button1:   ;break ;
+		case R.id.button2:  ; break;
+		case R.id.button3:   ; break;
+    }
+}
+
+
+
+
